@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f6fa;
+            text-align: center;
+            margin-top: 80px;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        .menu {
+            margin-top: 20px;
+        }
+        a {
+            margin: 0 10px;
+            text-decoration: none;
+            background: #3498db;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 6px;
+        }
+        a:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome, {{.Name}}</h2>
+    <p>Your Wallet Balance: <strong>₹{{.Balance}}</strong></p>
+
+    <div class="menu">
+         <a href="/payment">Send Money</a> | 
+         <a href="/history">Transaction History</a> | 
+         <a href="/update">Update Profile</a> |
+         <a href="/update-balance">Add Balance</a> |
+         <a href="/logout">Logout</a>
+
+    </div>
+</body>
+</html>

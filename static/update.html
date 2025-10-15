@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Profile</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f5f6fa; }
+        .update-box {
+            margin-top: 80px; background: white; padding: 30px;
+            width: 340px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input { width: 100%; padding: 8px; margin: 8px 0; border-radius: 5px; border: 1px solid #ccc; }
+        button { background-color: #3498db; color: white; border: none; padding: 10px; width: 100%; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #2980b9; }
+        .message { font-size: 14px; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="update-box">
+            <h2>Update Profile</h2>
+
+            {{if .Error}}
+                <p class="message" style="color:red;">{{.Error}}</p>
+            {{end}}
+
+            {{if .Success}}
+                <p class="message" style="color:green;">{{.Success}}</p>
+            {{end}}
+
+            <form action="/update" method="POST">
+                <label>Username</label>
+                <input type="text" name="username" value="{{.Username}}" required>
+
+                <label>Email</label>
+                <input type="email" name="email" value="{{.Email}}" required>
+
+                <label>Mobile No</label>
+                <input type="tel" name="mobile" value="{{.Mobile}}" pattern="[0-9]{10}" required>
+
+                <label>New Password</label>
+                <input type="password" name="password">
+
+                <label>Confirm Password</label>
+                <input type="password" name="confirm_password">
+
+                <button type="submit">Update</button>
+            </form>
+
+            <p><a href="/dashboard">Back to Dashboard</a></p>
+        </div>
+    </center>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f6fa;
+        }
+        .register-box {
+            margin-top: 80px;
+            background: white;
+            padding: 30px;
+            width: 340px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .message {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="register-box">
+            <h2>Register</h2>
+
+            <!-- ✅ Error message -->
+            {{if .Error}}
+                <p class="message" style="color:red;">{{.Error}}</p>
+            {{end}}
+
+            <!-- ✅ Success message -->
+            {{if .Success}}
+                <p class="message" style="color:green;">{{.Success}}</p>
+            {{end}}
+
+            <form action="/register" method="POST">
+                <label for="userid">Enter User ID</label>
+                <input type="text" id="userid" name="userid" required>
+
+                <label for="email">Enter Email ID</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mobile">Mobile No</label>
+                <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+
+                <label for="username">Enter Username</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+
+                <button type="submit">Register</button>
+            </form>
+
+            <p>Already have an account? <a href="/login">Login here</a></p>
+        </div>
+    </center>
+</body>
+</html>

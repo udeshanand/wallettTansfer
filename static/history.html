@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transection history</title>
+    <style>
+  table { border-collapse: collapse; width: 80%; margin: 20px auto; }
+  th, td { padding: 8px 12px; text-align: center; border: 1px solid #ccc; }
+  th { background-color: #3498db; color: white; }
+  tr:nth-child(even) { background-color: #f2f2f2; }
+  h2 { text-align: center; }
+  a { display: block; text-align: center; margin-top: 20px; text-decoration: none; color: #3498db; }
+  a:hover { text-decoration: underline; }
+</style>
+
+  </head>
+<body>
+    <h2>Transaction History</h2>
+<table border="1">
+  <tr><th>Type</th><th>User</th><th>Amount</th><th>Date</th></tr>
+  {{range .}}
+  <tr>
+    <td>{{.Type}}</td>
+    <td>{{.OtherUser}}</td>
+    <td>{{.Amount}}</td>
+    <td>{{.Date}}</td>
+  </tr>
+  {{end}}
+</table>
+<a href="/dashboard">Back</a>
+
+</body>
+</html>

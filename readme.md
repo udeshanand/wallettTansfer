@@ -34,22 +34,9 @@
       </div>
     </header>
 
-    <div class="card">
-      <h2>What you'll find inside</h2>
-      <ul>
-        <li>Project README (Markdown-styled content describing WalletTransfer)</li>
-        <li>Complete GitHub push & setup instructions (commands to run locally)</li>
-       
-      </ul>
+
 
       
-    </div>
-
-    <div class="grid">
-      <main class="card">
-
-        <!-- README CONTENT START -->
-        <article id="readme-markdown">
 <h1>💰 WalletTransfer</h1>
 
 <p>A simple <strong>digital wallet management system</strong> built in <strong>Go</strong> that allows users to securely <strong>add funds, transfer money between accounts, and view transaction history</strong>. This project demonstrates secure backend design, RESTful APIs, and database interaction using MySQL.</p>

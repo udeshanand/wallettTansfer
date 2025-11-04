@@ -138,32 +138,6 @@ git commit -m "Update README"
 git push
 </code></pre>
 
-<p class="muted">Tip: If your GitHub account uses SSH, replace the https remote URL with the SSH URL GitHub shows (ssh://...). If you run into permission errors, check that your local SSH key is added to your GitHub account or use a PAT for HTTPS pushes.</p>
-
-        </article>
-        <!-- README CONTENT END -->
-
-      </main>
-
-      <aside class="sidebar">
-        <h3>Quick checklist</h3>
-        <ol>
-          <li>Create <code>README.md</code> (already in this HTML)</li>
-          <li>Create <code>.env</code> from <code>.env.example</code></li>
-          <li>Run <code>go mod tidy</code></li>
-          <li>Run server: <code>go run main.go</code></li>
-          <li>Push to GitHub using commands above</li>
-        </ol>
-
-        <h4 style="margin-top:12px">Need a README.md file too?</h4>
-        <p class="muted">Use the button above to download a ready-made <code>README.md</code> copy of the content in this file.</p>
-      </aside>
-    </div>
-
-    <footer>
-      Created for <strong>wallettransfer</strong>. If you want a more production-ready README (badges, CI, license), tell me what CI or badges you want and I will add them.
-    </footer>
-  </div>
 
 
 </body>

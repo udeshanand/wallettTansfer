@@ -1,20 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>WalletTransfer — README & GitHub Setup</title>
 
-</head>
-<body>
-  <div class="container">
-    <header>
-      <div class="logo">WT</div>
-      <div>
-        <h1>WalletTransfer — </h1>
-        </div>
-      </div>
-    </header>
 
 <h1> WalletTransfer</h1>
 
